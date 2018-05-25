@@ -10,4 +10,4 @@ mvn jetty:run
 ```
 and then Enter the ```http://localhost:8080``` URL in browser's address bar to test our application.
 
-Also you could run this application on your eclipse or other IDEs' server application, just run it as tomcat application and enter ```http://localhost:8080/SpringMVC_Security_Hibernate_log4j2/```.
+Also you could run this application on your eclipse or other IDEs' server application, just run it as tomcat application and enter the ```http://localhost:8080/SpringMVC_Security_Hibernate_log4j2/``` URL in browser's address bar to test our application..
