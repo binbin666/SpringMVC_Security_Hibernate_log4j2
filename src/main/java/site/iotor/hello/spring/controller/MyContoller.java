@@ -13,6 +13,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import site.iotor.hello.spring.model.User;
 
 /**
  * @author Rancho
@@ -31,10 +34,13 @@ public class MyContoller {
         return "index";
     }
     
-    /*@GetMapping("/hello")
-    public String hello(Model model, Principal principal) {
-        model.addAttribute("message", "hello " + principal.getName());
-        return "index";
-    }*/
+    @GetMapping("/hello")
+    public @ResponseBody User hello(Principal principal) {
+        User user = new User();
+        user.setUsername(principal.getName());
+        user.setEnabled(true);
+        user.setAuthorities(null);
+        return user;
+    }
     
 }
