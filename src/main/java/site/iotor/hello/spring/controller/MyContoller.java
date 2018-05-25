@@ -39,7 +39,6 @@ public class MyContoller {
         User user = new User();
         user.setUsername(principal.getName());
         user.setEnabled(true);
-        user.setAuthorities(null);
         return user;
     }
     
