@@ -18,7 +18,7 @@
 		<mysql.version>6.0.6</mysql.version>
 		<lombok.version>1.18.8</lombok.version>
 		<log4j.version>2.11.1</log4j.version>
-		<jackson.version>2.9.9.1</jackson.version>
+		<jackson.version>2.9.9.2</jackson.version>
 	</properties>
 	<description>Spring learn with SpringMVC(5.0.5.RELEASE)/SpringSecurity(5.0.5.RELEASE)/Hibernate(5.2.17.Final)/log4j2(2.11.1)</description>
 
