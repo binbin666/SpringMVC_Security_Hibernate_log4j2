@@ -12,15 +12,15 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<spring.version>5.0.5.RELEASE</spring.version>
-		<hibernate.version>5.2.17.Final</hibernate.version>
+		<spring.version>5.2.0.RELEASE</spring.version>
+		<hibernate.version>5.4.5.Final</hibernate.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mysql.version>6.0.6</mysql.version>
-		<lombok.version>1.18.8</lombok.version>
-		<log4j.version>2.11.1</log4j.version>
-		<jackson.version>2.9.9.2</jackson.version>
+		<lombok.version>1.18.10</lombok.version>
+		<log4j.version>2.12.1</log4j.version>
+		<jackson.version>2.10.0</jackson.version>
 	</properties>
-	<description>Spring learn with SpringMVC(5.0.5.RELEASE)/SpringSecurity(5.0.5.RELEASE)/Hibernate(5.2.17.Final)/log4j2(2.11.1)</description>
+	<description>Spring learn with SpringMVC(5.2.0.RELEASE)/SpringSecurity(5.2.0.RELEASE)/Hibernate(5.4.5.Final)/log4j2(2.12.1)</description>
 
 	<dependencies>
 		<dependency>
