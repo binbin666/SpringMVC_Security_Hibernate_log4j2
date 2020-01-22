@@ -12,7 +12,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<spring.version>5.2.0.RELEASE</spring.version>
+		<spring.version>5.2.1.RELEASE</spring.version>
 		<hibernate.version>5.4.5.Final</hibernate.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mysql.version>6.0.6</mysql.version>
