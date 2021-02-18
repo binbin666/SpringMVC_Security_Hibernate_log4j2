@@ -26,8 +26,11 @@ import site.iotor.hello.spring.model.PersistentLogins;
 @Transactional
 public class PersistentTokenDaoImp implements PersistentTokenRepository {
     
-    @Autowired
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
+
+    public PersistentTokenDaoImp(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     /* (non-Javadoc)
      * @see org.springframework.security.web.authentication.rememberme.PersistentTokenRepository#createNewToken(org.springframework.security.web.authentication.rememberme.PersistentRememberMeToken)

@@ -8,6 +8,7 @@ package site.iotor.hello.spring.controller;
 
 import java.security.Principal;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -20,14 +21,9 @@ import site.iotor.hello.spring.model.User;
 /**
  * @author Rancho
  */
-
 @Controller
 public class MyContoller {
 
-    Logger logger = LogManager.getLogger(this.getClass().getName());
-    
-    {logger.info("scanned it...." + this.getClass().getName());}
-    
     @GetMapping("/")
     public String index(Model model, Principal principal) {
         model.addAttribute("message", "You are logged in as " + principal.getName());

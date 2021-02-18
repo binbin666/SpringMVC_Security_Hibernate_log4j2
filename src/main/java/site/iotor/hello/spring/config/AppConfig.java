@@ -46,8 +46,11 @@ import site.iotor.hello.spring.model.User;
         @ComponentScan("site.iotor.hello.spring.service") })
 public class AppConfig {
     
-    @Autowired
-    private Environment env;
+    private final Environment env;
+
+    public AppConfig(Environment env) {
+        this.env = env;
+    }
 
     @Bean
     public LocalSessionFactoryBean getSessionFactory() {

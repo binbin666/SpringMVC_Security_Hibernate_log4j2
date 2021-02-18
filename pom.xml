@@ -16,7 +16,7 @@
 		<hibernate.version>5.4.12.Final</hibernate.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
 		<mysql.version>8.0.21</mysql.version>
-		<lombok.version>1.18.10</lombok.version>
+		<lombok.version>1.18.18</lombok.version>
 		<log4j.version>2.13.3</log4j.version>
 		<jackson.version>2.12.1</jackson.version>
 	</properties>

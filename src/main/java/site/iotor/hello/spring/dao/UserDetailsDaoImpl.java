@@ -19,11 +19,11 @@ import site.iotor.hello.spring.model.User;
 
 @Repository
 public class UserDetailsDaoImpl implements UserDetailsDao {
+    private final SessionFactory sessionFactory;
 
-//    Logger logger = LogManager.getLogger(this.getClass().getName());
-    
-    @Autowired
-    private SessionFactory sessionFactory;
+    public UserDetailsDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     /* (non-Javadoc)
      * @see com.boraji.tutorial.spring.dao.UserDetailsDao#findUserByUsername(java.lang.String)

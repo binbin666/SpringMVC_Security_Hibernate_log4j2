@@ -17,7 +17,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import site.iotor.hello.spring.dao.UserDetailsDao;
+import site.iotor.hello.spring.model.Authorities;
 import site.iotor.hello.spring.model.User;
+
+import java.util.Objects;
 
 /**
  * @author Rancho
@@ -28,12 +31,15 @@ public class UserDetailsServiceImp implements UserDetailsService {
 
     Logger logger = LogManager.getLogger(this.getClass().getName());
 
-    @Autowired
-    private UserDetailsDao userDetailsDao;
+    private final UserDetailsDao userDetailsDao;
+
+    public UserDetailsServiceImp(UserDetailsDao userDetailsDao) {
+        this.userDetailsDao = userDetailsDao;
+    }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.springframework.security.core.userdetails.UserDetailsService#
      * loadUserByUsername(java.lang.String)
      */
@@ -42,20 +48,17 @@ public class UserDetailsServiceImp implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // Auto-generated method stub
         User user = userDetailsDao.findUserByUsername(username);
-        UserBuilder builder = null;
-        if (user != null) {
-
-            logger.info("loadUserByUsername>userModelToString:" + user.toString());
-            
-            builder = org.springframework.security.core.userdetails.User.withUsername(username);
-            builder.disabled(!user.isEnabled());
-            builder.password(user.getPassword());
-            String[] authorities = user.getAuthorities().stream().map(a -> a.getAuthority()).toArray(String[]::new);
-
-            builder.authorities(authorities);
-        } else {
+        if (Objects.isNull(user)) {
             throw new UsernameNotFoundException("User not found.");
         }
+        logger.info("loadUserByUsername>userModelToString:" + user.toString());
+
+        UserBuilder builder = org.springframework.security.core.userdetails.User.withUsername(username);
+        builder.disabled(!user.isEnabled());
+        builder.password(user.getPassword());
+        String[] authorities = user.getAuthorities().stream().map(Authorities::getAuthority).toArray(String[]::new);
+
+        builder.authorities(authorities);
         return builder.build();
     }
 

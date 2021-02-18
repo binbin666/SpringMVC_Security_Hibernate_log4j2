@@ -25,15 +25,15 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
-    Logger logger = LogManager.getLogger(this.getClass().getName());
+    private final UserDetailsService userDetailsService;
+    private final PersistentTokenRepository persistentTokenRepository;
 
-    @Autowired
-    private UserDetailsService userDetailsService;
-    
-    @Autowired
-    @Qualifier("persistentTokenRepository")
-    private PersistentTokenRepository persistentTokenRepository;
-    
+    public WebSecurityConfig(UserDetailsService userDetailsService,
+                             @Qualifier("persistentTokenRepository") PersistentTokenRepository persistentTokenRepository) {
+        this.userDetailsService = userDetailsService;
+        this.persistentTokenRepository = persistentTokenRepository;
+    }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

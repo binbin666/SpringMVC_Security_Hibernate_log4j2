@@ -24,8 +24,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ComponentScan(basePackages = { "site.iotor.hello.spring.controller" })
 public class WebConfig implements WebMvcConfigurer {
 
-    Logger logger = LogManager.getLogger(this.getClass().getName());
-
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.jsp().prefix("/WEB-INF/views/").suffix(".jsp");
