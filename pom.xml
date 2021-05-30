@@ -12,21 +12,22 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<spring.version>5.2.4.RELEASE</spring.version>
-		<hibernate.version>5.4.12.Final</hibernate.version>
+		<spring.version>5.3.7</spring.version>
+		<spring-security.version>5.5.0</spring-security.version>
+		<hibernate.version>5.4.32.Final</hibernate.version>
 		<c3p0.version>0.9.5.4</c3p0.version>
-		<mysql.version>8.0.21</mysql.version>
-		<lombok.version>1.18.18</lombok.version>
-		<log4j.version>2.13.3</log4j.version>
-		<jackson.version>2.12.2</jackson.version>
+		<mysql.version>8.0.25</mysql.version>
+		<lombok.version>1.18.20</lombok.version>
+		<log4j.version>2.14.1</log4j.version>
+		<jackson.version>2.12.3</jackson.version>
 	</properties>
-	<description>Spring learn with SpringMVC(5.2.4.RELEASE)/SpringSecurity(5.2.4.RELEASE)/Hibernate(5.4.12.Final)/log4j2(2.13.3)</description>
+	<description>Spring learn with SpringMVC(5.3.7)/SpringSecurity(5.5.0)/Hibernate(5.4.32.Final)/log4j2(2.14.1)</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring-security.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>spring-aop</artifactId>
@@ -38,7 +39,7 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring-security.version}</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>spring-aop</artifactId>
@@ -50,7 +51,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-<!--			<version>[5.2.3,)</version>-->
 			<version>${spring.version}</version>
 			<exclusions>
 				<exclusion>
