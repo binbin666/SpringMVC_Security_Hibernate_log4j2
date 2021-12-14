@@ -1,5 +1,5 @@
 # SpringMVC_Security_Hibernate_log4j2
-Spring learn with Spring learn with SpringMVC(5.3.7)/SpringSecurity(5.5.0)/Hibernate(5.4.32.Final)/log4j2(2.14.1)
+Spring learn with Spring learn with SpringMVC(5.3.7)/SpringSecurity(5.5.0)/Hibernate(5.4.32.Final)/log4j2(2.16.0)
 
 ### Tips
 A simple project validating userinfo builded with SpringMVC, SpringSecurity, Hibernate and log4j2.
