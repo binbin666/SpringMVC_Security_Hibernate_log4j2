@@ -18,7 +18,7 @@
 		<c3p0.version>0.9.5.5</c3p0.version>
 		<mysql.version>8.0.27</mysql.version>
 		<lombok.version>1.18.22</lombok.version>
-		<log4j.version>2.16.0</log4j.version>
+		<log4j.version>2.17.0</log4j.version>
 		<jackson.version>2.13.0</jackson.version>
 	</properties>
 	<description>Spring learn with SpringMVC(5.3.7)/SpringSecurity(5.5.0)/Hibernate(5.4.32.Final)/log4j2(2.16.0)</description>
