@@ -12,16 +12,16 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
-		<spring.version>5.3.15</spring.version>
-		<spring-security.version>5.5.1</spring-security.version>
-		<hibernate.version>5.6.4.Final</hibernate.version>
+		<spring.version>5.3.25</spring.version>
+		<spring-security.version>5.8.1</spring-security.version>
+		<hibernate.version>5.6.14.Final</hibernate.version>
 		<c3p0.version>0.9.5.5</c3p0.version>
-		<mysql.version>8.0.27</mysql.version>
-		<lombok.version>1.18.22</lombok.version>
-		<log4j.version>2.17.1</log4j.version>
-		<jackson.version>2.13.1</jackson.version>
+		<mysql.version>8.0.31</mysql.version>
+		<lombok.version>1.18.24</lombok.version>
+		<log4j.version>2.19.0</log4j.version>
+		<jackson.version>2.14.1</jackson.version>
 	</properties>
-	<description>Spring learn with SpringMVC(5.3.7)/SpringSecurity(5.5.0)/Hibernate(5.4.32.Final)/log4j2(2.16.0)</description>
+	<description>Spring learn with SpringMVC(5.3.25)/SpringSecurity(5.8.1)/Hibernate(5.6.14.Final)/log4j2(2.19.0)</description>
 
 	<dependencies>
 		<dependency>
@@ -121,8 +121,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
 
